@@ -56,6 +56,7 @@ public class SpotBugsTaskFactory {
                                   task.setClassDirs(sourceSet.getOutput());
                                   task.setAuxClassPaths(sourceSet.getCompileClasspath());
                                   configurationAction.execute(task);
+                                  task.setGroup(JavaBasePlugin.VERIFICATION_GROUP);
                                 });
                       });
             });
